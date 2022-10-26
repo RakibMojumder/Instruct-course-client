@@ -34,6 +34,10 @@ const router = createBrowserRouter([
                 element: <Courselayout />,
                 children: [
                     {
+                        path: '/courselayout',
+                        element: <Courses />
+                    },
+                    {
                         path: '/courselayout/:id',
                         loader: async ({ params }) => {
                             return await fetch(`http://localhost:5000/categories/${params.id}`)

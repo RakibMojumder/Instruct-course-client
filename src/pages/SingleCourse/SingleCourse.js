@@ -14,7 +14,7 @@ const SingleCourse = ({ course }) => {
                 <div className='flex items-center justify-between mb-2'>
                     <p className='my-2'>Author: {author}</p>
                     <p>Ratings: {rating}</p>
-                    <p className='text-2xl text-[#A78BFA]'>Price: ${price}</p>
+                    <p className='text-xl'>Price: <span className='text-[#A78BFA] font-bold text-2xl'>${price}</span></p>
                 </div>
                 {
                     details.length > 280 ?

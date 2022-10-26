@@ -4,7 +4,7 @@ import LeftSideNav from '../pages/shared/LeftSideNav/LeftSideNav';
 
 const Courselayout = () => {
     return (
-        <div className="container grid grid-cols-12 gap-10">
+        <div className="container grid grid-cols-12 gap-10 my-14">
             <div className="left-side-nav col-span-3">
                 <LeftSideNav />
             </div>
