@@ -1,0 +1,8 @@
+.hover-div {
+    display: none;
+}
+
+
+.img-div:hover .hover-div {
+    display: block;
+}

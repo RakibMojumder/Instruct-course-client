@@ -8,6 +8,7 @@ const Header = () => {
         <Navbar
             fluid={true}
             rounded={true}
+            style={{ "background": "transparent", "padding": "20px 0" }}
         >
             <Navbar.Brand href="https://flowbite.com/">
                 <img
@@ -35,7 +36,7 @@ const Header = () => {
                 >
                     Home
                 </NavLink>
-                <NavLink to="/course" className="text-base">
+                <NavLink to="/courses" className="text-base">
                     Course
                 </NavLink>
                 <NavLink to="/faq" className="text-base">

@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../../pages/Blog/Blog";
-import Course from "../../pages/Course/Course";
+import Courses from "../../pages/Courses/Courses";
 import FAQ from "../../pages/FAQ/FAQ";
 import Home from "../../pages/Home/Home";
 
@@ -12,14 +12,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                loader: async () => {
-                    return await fetch(`http://localhost:5000/courses`)
-                },
                 element: <Home />
             },
             {
-                path: '/course',
-                element: <Course />
+                path: '/courses',
+                element: <Courses />
             },
             {
                 path: '/faq',
