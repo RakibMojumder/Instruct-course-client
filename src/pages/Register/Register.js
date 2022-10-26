@@ -84,18 +84,18 @@ const Register = () => {
                     <div className="user-name flex justify-between">
                         <div className="form-control mb-4 w-[47%]">
                             <label className='text-white' htmlFor="fname">Your First Name</label>
-                            <input className='text-slate-800' type="text" name='fname' id='fname' placeholder='Your first name' />
+                            <input className='text-slate-800' type="text" name='fname' id='fname' placeholder='Your first name' required />
                         </div>
 
                         <div className="form-control mb-4 w-[47%]">
                             <label className='text-white' htmlFor="lname">Your Last Name</label>
-                            <input className='text-slate-800' type="text" name='lname' id='lname' placeholder='Your last name' />
+                            <input className='text-slate-800' type="text" name='lname' id='lname' placeholder='Your last name' required />
                         </div>
                     </div>
 
                     <div className="form-control mb-4">
                         <label className='text-white' htmlFor="photoURL">Your photoURL</label>
-                        <input className='text-slate-800' type="text" name='photoURL' id='photoURL' placeholder='Your photoURL' />
+                        <input className='text-slate-800' type="text" name='photoURL' id='photoURL' placeholder='Your photoURL' required />
                     </div>
                     <div className="form-control mb-4">
                         <label className='text-white' htmlFor="email">Your Email</label>

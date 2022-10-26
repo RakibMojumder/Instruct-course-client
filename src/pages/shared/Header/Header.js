@@ -25,7 +25,7 @@ const Header = () => {
             rounded={true}
             style={{ "background": "transparent", "padding": "20px 0" }}
         >
-            <Navbar.Brand href="https://flowbite.com/">
+            <Navbar.Brand href="http://localhost:3000">
                 <img
                     src={logoImg}
                     className="mr-3 h-6 sm:h-9"
@@ -36,47 +36,56 @@ const Header = () => {
                 </span>
             </Navbar.Brand>
             <div className="flex md:order-2">
-                {/* <Dropdown
-                    arrowIcon={false}
-                    inline={true}
-                    label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded={true} />}
-                >
-                </Dropdown> */}
-
 
                 {
-                    user && user.uid ?
-                        <FaUser className='text-2xl' title={user?.displayName ? user.displayName : 'user not logged in'} /> : 'user nai'
+                    user && user?.photoURL ?
+                        <img className='h-10 w-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
+                        :
+                        <FaUser />
                 }
+                <span className='ml-6'>
+                    <label for="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer text-gray-100">
+                        <span className="relative">
+                            <input id="Toggle1" type="checkbox" className="hidden peer" />
+                            <div className="w-10 h-6 rounded-full shadow-inner bg-gray-400 peer-checked:bg-violet-400"></div>
+                            <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto bg-gray-800"></div>
+                        </span>
+                    </label>
+                </span>
 
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
-                <NavLink
-                    to="/"
-                    className={({ isActive }) => isActive ? 'text-white' : undefined}
 
-                >
-                    Home
-                </NavLink>
-                <NavLink to="/courselayout" >
+                <NavLink
+                    to="/courselayout"
+                    className={({ isActive }) => isActive ? "text-base text-[#A78BFA] border-b border-b-[#A78BFA]"
+                        : "text-base"}>
                     Courses
                 </NavLink>
-                <NavLink to="/faq" >
+                <NavLink
+                    to="/faq"
+                    className={({ isActive }) => isActive ? "text-base text-[#A78BFA] border-b border-b-[#A78BFA]"
+                        : "text-base"}
+                >
                     FAQ
                 </NavLink>
-                <NavLink to="/blog" >
+                <NavLink to="/blog" className={({ isActive }) => isActive ? "text-base text-[#A78BFA] border-b border-b-[#A78BFA]"
+                    : "text-base"}>
                     Blog
                 </NavLink>
+
                 {
                     user ?
-                        <span onClick={handleLogOut} className='cursor-pointer'>log out</span>
+                        <span onClick={handleLogOut} className='cursor-pointer text-base'>log out</span>
                         :
                         <>
-                            <NavLink to="/register" >
+                            <NavLink to="/register" className={({ isActive }) => isActive ? "text-base text-[#A78BFA] border-b border-b-[#A78BFA]"
+                                : "text-base"}>
                                 Register
                             </NavLink>
-                            <NavLink to="/login" >
+                            <NavLink to="/login" className={({ isActive }) => isActive ? "text-base text-[#A78BFA] border-b border-b-[#A78BFA]"
+                                : "text-base"}>
                                 Log in
                             </NavLink>
                         </>
