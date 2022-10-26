@@ -9,6 +9,7 @@ import FAQ from "../../pages/FAQ/FAQ";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
                         loader: async ({ params }) => {
                             return await fetch(`http://localhost:5000/course/${params.id}`)
                         },
-                        element: <CourseDetails />
+                        element: <PrivateRoutes><CourseDetails /></PrivateRoutes>
                     }
                 ]
             }
