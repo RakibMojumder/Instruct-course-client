@@ -15,7 +15,7 @@ const Courses = () => {
 
 
     return (
-        <div className='grid grid-cols-12 gap-10 py-14'>
+        <div className='grid grid-cols-12 gap-10'>
             <div className="left-side-nav col-span-3">
                 <LeftSideNav />
             </div>
@@ -23,6 +23,11 @@ const Courses = () => {
                 {courseData.map(course => <Course key={course.id} course={course}></Course>)}
             </div>
         </div>
+
+        // <div className="courses grid grid-cols-3 gap-10">
+        //     {courseData.map(course => <Course key={course.id} course={course}></Course>)}
+        // </div>
+
     );
 };
 

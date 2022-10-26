@@ -36,7 +36,7 @@ const Header = () => {
                 >
                     Home
                 </NavLink>
-                <NavLink to="/courses" className="text-base">
+                <NavLink to="/courselayout" className="text-base">
                     Course
                 </NavLink>
                 <NavLink to="/faq" className="text-base">
