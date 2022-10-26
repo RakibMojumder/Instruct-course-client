@@ -4,8 +4,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-
-
     return (
         <div>
             <section className='h-screen grid grid-cols-12 gap-6 items-center'>

@@ -2,8 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Avatar, Dropdown } from 'flowbite-react';
 import logoImg from '../../../assets/img/logo.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+    const { user } = useContext(AuthContext)
+
     return (
         <Navbar
             fluid={true}
@@ -37,7 +42,7 @@ const Header = () => {
                     Home
                 </NavLink>
                 <NavLink to="/courselayout" className="text-base">
-                    Course
+                    Courses
                 </NavLink>
                 <NavLink to="/faq" className="text-base">
                     FAQ
@@ -45,6 +50,19 @@ const Header = () => {
                 <NavLink to="/blog" className="text-base">
                     Blog
                 </NavLink>
+                {
+                    user ?
+                        <span>log out</span>
+                        :
+                        <>
+                            <NavLink to="/register" className="text-base">
+                                Register
+                            </NavLink>
+                            <NavLink to="/login" className="text-base">
+                                Log in
+                            </NavLink>
+                        </>
+                }
             </Navbar.Collapse>
         </Navbar>
     );

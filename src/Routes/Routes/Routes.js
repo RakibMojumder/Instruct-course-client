@@ -7,6 +7,8 @@ import CourseDetails from "../../pages/CourseDetails/CourseDetails";
 import Courses from "../../pages/Courses/Courses";
 import FAQ from "../../pages/FAQ/FAQ";
 import Home from "../../pages/Home/Home";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
                 element: <FAQ />
             },
             {
+                path: '/register',
+                element: <Register />
+            },
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
                 path: '/blog',
                 element: <Blog />
             },
@@ -43,6 +53,13 @@ const router = createBrowserRouter([
                             return await fetch(`http://localhost:5000/categories/${params.id}`)
                         },
                         element: <CourseCategories />
+                    },
+                    {
+                        path: '/courselayout/coursedetails/:id',
+                        loader: async ({ params }) => {
+                            return await fetch(`http://localhost:5000/course/${params.id}`)
+                        },
+                        element: <CourseDetails />
                     }
                 ]
             }
