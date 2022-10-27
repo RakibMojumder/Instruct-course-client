@@ -5,7 +5,7 @@ const FAQ = () => {
     return (
         <div className='grid grid-cols-12'>
             <div className='col-span-1 md:col-span-2'></div>
-            <div className='col-span-10 md:col-span-8 h-screen flex items-center'>
+            <div className='col-span-10 md:col-span-8 mt-[60px] mb-[50px]'>
                 <Accordion>
                     <Accordion.Panel>
                         <Accordion.Title>
