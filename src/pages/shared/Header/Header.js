@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { Navbar } from 'flowbite-react';
+import { Avatar, Navbar } from 'flowbite-react';
 import logoImg from '../../../assets/img/logo.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
@@ -51,14 +51,10 @@ const Header = () => {
                     </label>
                 </span>
 
-                <div className='ml-5 md:mr-0' onClick={handleUserProfile}>
-                    {
-                        user && user?.photoURL ?
-                            <img className='h-10 w-10 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
-                            :
-                            <FaUserCircle className='text-3xl' />
-                    }
+                <div>
+                    {user ? user?.photoURL ? <img className='h-10 w-10 ml-3 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} /> : <FaUserCircle className='text-3xl ml-3' /> : ""}
                 </div>
+
 
                 <Navbar.Toggle />
             </div>

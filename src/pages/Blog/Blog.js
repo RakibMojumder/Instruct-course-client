@@ -25,10 +25,7 @@ const Blog = () => {
                 <h3 className='text-xl font-semibold'><FaArrowCircleRight className='inline-block' /> How does Node work?</h3>
                 <p className='pl-5'> Node.js accepts the request from the clients and sends the response, while working with the request node.js handles them with a single thread. To operate I/O operations or requests node.js use the concept of threads. Thread is a sequence of instructions that the server needs to perform. It runs parallel on the server to provide the information to multiple clients. Node.js is an event loop single-threaded language. It can handle concurrent requests with a single thread without blocking it for one request.</p>
             </article>
-            <article className='text-justify mb-5'>
-                <h3 className='text-xl font-semibold'><FaArrowCircleRight className='inline-block' /> Why are you using firebase?</h3>
-                <p className='pl-5'>The Firebase Realtime Database lets you build rich, collaborative applications by allowing secure access to the database directly from client-side code. Data is persisted locally, and even while offline, realtime events continue to fire, giving the end user a responsive experience.</p> <br />
-
+            <article>
                 <h3 className='text-xl font-semibold'><FaArrowCircleRight className='inline-block' /> What other options do you have to implement authentication?</h3>
                 <p className='pl-5'>There are many options to implement authenticaion such as <strong>Microsoft</strong>, <strong>Ping Identity</strong>, <strong>Oracle</strong>, <strong>IBM</strong> etc.</p>
             </article>

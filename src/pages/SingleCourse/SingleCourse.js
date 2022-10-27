@@ -19,7 +19,7 @@ const SingleCourse = ({ course }) => {
     }
 
     return (
-        <div ref={ref} className='grid grid-cols-1 lg:grid-cols-12 lg:gap-7 lg:h-[260px] mb-7 rounded-md border border-slate-500'>
+        <div ref={ref} className='grid grid-cols-1 lg:grid-cols-12 lg:gap-7 lg:h-[260px] mb-7 rounded-md border border-slate-300'>
             <div className="course-img col-span-1 lg:col-span-4">
                 <img className='h-[258px] w-full' src={img} alt="" />
             </div>
