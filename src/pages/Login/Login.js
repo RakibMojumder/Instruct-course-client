@@ -63,7 +63,7 @@ const Login = () => {
         <div className='grid grid-cols-12'>
             <div className="div col-span-3"></div>
             <div className="div col-span-6 my-14 p-16 border">
-                <h1 className='text-4xl font-bold text-center text-[#A78BFA]'>Sign In</h1>
+                <h1 className='text-4xl font-bold text-center text-[#7c53f5]'>Sign In</h1>
                 <p className='text-center mb-12'>Sign in to access your account</p>
                 <form onSubmit={handleSubmit}>
                     <div className="form-control mb-4">
@@ -77,7 +77,7 @@ const Login = () => {
 
                     {error && <p className='text-red-500 mb-3'>{error}</p>}
 
-                    <button type='submit' className='bg-[#A78BFA] text-white w-full h-10'>Log in</button>
+                    <button type='submit' className='bg-[#7c53f5] text-white w-full h-10'>Log in</button>
                 </form>
 
                 <div className="flex justify-between items-center mt-6">
@@ -86,12 +86,12 @@ const Login = () => {
                     <div className="line w-[27%] bg-white h-[1px]"></div>
                 </div>
 
-                <div className="login-with-social-account text-3xl flex items-center justify-center mt-5 text-[#A78BFA]">
+                <div className="login-with-social-account text-3xl flex items-center justify-center mt-5 text-[#7c53f5]">
                     <FaGoogle onClick={handleGoogleSignIn} />
                     <FaGithub onClick={handleGithubSignIn} className='mx-4' />
                     <FaFacebook onClick={handleFacebookSignIn} />
                 </div>
-                <p className='text-center mt-6'>Don't have an account? <Link to='/register' className='text-[#A78BFA] hover:underline'>Register</Link></p>
+                <p className='text-center mt-6'>Don't have an account? <Link to='/register' className='text-[#7c53f5] hover:underline'>Register</Link></p>
             </div>
             <div className="div col-span-3"></div>
         </div>

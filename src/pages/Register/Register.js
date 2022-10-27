@@ -78,7 +78,7 @@ const Register = () => {
         <div className='grid grid-cols-12'>
             <div className="div col-span-3"></div>
             <div className="div col-span-6 my-14 p-16 border">
-                <h1 className='text-4xl font-bold text-center text-[#A78BFA]'>Register</h1>
+                <h1 className='text-4xl font-bold text-center text-[#7c53f5]'>Register</h1>
                 <p className='text-center mb-12'>Create an account</p>
                 <form onSubmit={handleSubmit}>
                     <div className="user-name flex justify-between">
@@ -95,7 +95,7 @@ const Register = () => {
 
                     <div className="form-control mb-4">
                         <label className='text-white' htmlFor="photoURL">Your photoURL</label>
-                        <input className='text-slate-800' type="text" name='photoURL' id='photoURL' placeholder='Your photoURL' required />
+                        <input className='text-slate-800' type="text" name='photoURL' id='photoURL' placeholder='Your photoURL' />
                     </div>
                     <div className="form-control mb-4">
                         <label className='text-white' htmlFor="email">Your Email</label>
@@ -110,7 +110,7 @@ const Register = () => {
                         error && <p className='text-red-500'>{error}</p>
                     }
 
-                    <button className='bg-[#A78BFA] text-white w-full h-10' type='submit'>Register</button>
+                    <button className='bg-[#7c53f5] text-white w-full h-10' type='submit'>Register</button>
                 </form>
 
                 <div className="flex justify-between items-center mt-6">
@@ -119,12 +119,12 @@ const Register = () => {
                     <div className="line w-[27%] bg-white h-[1px]"></div>
                 </div>
 
-                <div className="register-with-social-account text-3xl flex items-center justify-center mt-5 text-[#A78BFA]">
+                <div className="register-with-social-account text-3xl flex items-center justify-center mt-5 text-[#7c53f5]">
                     <FaGoogle onClick={handleGoogleSignIn} />
                     <FaGithub onClick={handleGithubSignIn} className='mx-4' />
                     <FaFacebook onClick={handleFacebookSignIn} />
                 </div>
-                <p className='text-center mt-6'>Already have an account? <Link to='/login' className='text-[#A78BFA] hover:underline'>log in</Link></p>
+                <p className='text-center mt-6'>Already have an account? <Link to='/login' className='text-[#7c53f5] hover:underline'>log in</Link></p>
             </div>
             <div className="div col-span-3"></div>
         </div>

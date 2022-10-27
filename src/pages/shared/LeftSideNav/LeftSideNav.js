@@ -17,7 +17,7 @@ const LeftSideNav = () => {
         <div>
             <div className='list-none'>
                 {
-                    categories.map(category => <li key={category.id}><Link to={`/courselayout/${category.id}`} className='bg-[#A78BFA] mb-3 py-3 rounded-md text-white text-center block'>{category.title}</Link></li>)
+                    categories.map(category => <li key={category.id}><Link to={`/courselayout/${category.id}`} className='bg-white mb-3 py-3 border border-[#7c53f5] rounded-md text-[#7c53f5] text-center block hover:bg-[#7c53f5] hover:text-white transition-all'>{category.title}</Link></li>)
                 }
             </div>
         </div>
