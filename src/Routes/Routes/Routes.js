@@ -53,14 +53,14 @@ const router = createBrowserRouter([
                     {
                         path: '/courselayout/:id',
                         loader: async ({ params }) => {
-                            return await fetch(`http://localhost:5000/categories/${params.id}`)
+                            return await fetch(`https://instruct-course-server-side.vercel.app/categories/${params.id}`)
                         },
                         element: <CourseCategories />
                     },
                     {
                         path: '/courselayout/coursedetails/:id',
                         loader: async ({ params }) => {
-                            return await fetch(`http://localhost:5000/course/${params.id}`)
+                            return await fetch(`https://instruct-course-server-side.vercel.app/course/${params.id}`)
                         },
                         element: <PrivateRoutes><CourseDetails /></PrivateRoutes>
                     }

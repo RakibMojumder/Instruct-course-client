@@ -20,7 +20,7 @@ const CourseDetails = () => {
                 </div>
 
                 <div className="course-details">
-                    <h1 className='text-3xl my-5 text-white'>{title}</h1>
+                    <h1 className='text-3xl my-5'>{title}</h1>
                     <p>{details}</p>
                     <div className='text-right mt-3'>
                         <button onClick={handleNavigate} className='px-5 py-1 rounded-full bg-[#7c53f5] text-white'><FaArrowLeft className='inline-block mr-2' /> Back</button>
