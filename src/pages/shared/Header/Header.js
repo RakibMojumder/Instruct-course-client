@@ -30,7 +30,7 @@ const Header = () => {
             rounded={true}
             style={{ "background": "transparent", "padding": "20px 0" }}
         >
-            <Navbar.Brand href="http://localhost:3000">
+            <Navbar.Brand href="https://instruct-course.web.app/">
                 <img
                     src={logoImg}
                     className="mr-3 h-6 sm:h-9"
@@ -51,7 +51,7 @@ const Header = () => {
                     </label>
                 </span>
 
-                <div>
+                <div onClick={handleUserProfile}>
                     {user ? user?.photoURL ? <img className='h-10 w-10 ml-3 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} /> : <FaUserCircle className='text-3xl ml-3' /> : ""}
                 </div>
 
