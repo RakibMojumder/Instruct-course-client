@@ -23,7 +23,7 @@ const CourseDetails = () => {
                     <h1 className='text-3xl my-5'>{title}</h1>
                     <p>{details}</p>
                     <div className='text-right mt-3'>
-                        <button onClick={handleNavigate} className='px-5 py-1 rounded-full bg-[#7c53f5] text-white'><FaArrowLeft className='inline-block mr-2' /> Back</button>
+                        <button onClick={handleNavigate} className='px-5 py-1 rounded-full bg-[#7C53F5] text-white'><FaArrowLeft className='inline-block mr-2' /> Back</button>
                     </div>
                 </div>
             </div>

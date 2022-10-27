@@ -8,7 +8,6 @@ const Course = ({ course }) => {
         navigate(`/courselayout/${course.id}`)
     }
 
-    console.log(course)
 
     return (
         <div onClick={handleNavigate} className="img-div h-full w-full relative">
