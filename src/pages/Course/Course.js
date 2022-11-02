@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Course.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
 const Course = ({ course }) => {
+    const { img, title, total_Lecture } = course;
     const navigate = useNavigate();
     const handleNavigate = () => {
         navigate(`/courselayout/${course.id}`)
@@ -10,12 +12,16 @@ const Course = ({ course }) => {
 
 
     return (
-        <div onClick={handleNavigate} className="img-div h-full w-full relative">
-            <img className='w-full h-full rounded-lg' src={course.img} alt="" />
-            <div className="hover-div hidden h-full w-full absolute top-0 left-0 bg-[rgba(0,0,0,.3)]">
-                <h1 className='text-3xl text-center mt-20 font-bold text-white uppercase'>{course?.title}</h1>
-                <p className='text-center text-white text-xl'>Total Lecture: <span className='text-3xl font-bold'>{course?.total_Lecture}</span></p>
-
+        <div className='border border-slate-600 rounded-lg' data-aos="fade-up" data-aos-duration="1000">
+            <div className="img-div h-[140px] lg:h-[180px]">
+                <img className='rounded-t-lg h-full w-full' src={img} alt="" />
+            </div>
+            <div className="course-description px-2 py-3">
+                <h1 className='text-2xl font-bold lg:mb-2'>{title}</h1>
+                <div className='flex justify-between items-center'>
+                    <p className='mb-2 lg:mb-0'>Total Lecture: <span className='text-xl font-bold text-[#0EA5E9]'>{total_Lecture}</span></p>
+                    <button onClick={handleNavigate} className='px-6 py-1 lg:mt-0 rounded-full bg-[#0EA5E9]'>Go <FontAwesomeIcon className='ml-1' icon={faArrowRightLong} /></button>
+                </div>
             </div>
         </div>
     );

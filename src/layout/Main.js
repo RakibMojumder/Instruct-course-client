@@ -7,7 +7,7 @@ import Header from '../pages/shared/Header/Header';
 const Main = () => {
     return (
         <>
-            <div className="lg:w-[1200px] mx-auto">
+            <div className="App w-[90%] mx-auto lg:w-[1200px]">
                 <Header />
                 <Outlet />
             </div>

@@ -10,6 +10,8 @@ import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import ErrorPage from "../../pages/shared/ErrorPage/ErrorPage";
+import UpdateUserInfo from "../../pages/UpdateUserInfo/UpdateUserInfo";
+import UserProfile from "../../pages/UserProfile/UserProfile";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 const router = createBrowserRouter([
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog />
+            },
+            {
+                path: '/userprofile',
+                element: <PrivateRoutes><UserProfile /></PrivateRoutes>
+            },
+            {
+                path: '/updateuserinfo',
+                element: <UpdateUserInfo />
             },
             {
                 path: '/courselayout',

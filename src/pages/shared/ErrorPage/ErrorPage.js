@@ -14,7 +14,7 @@ const ErrorPage = () => {
             <p className='text-7xl text-slate-700 text-center font-bold'>Opsss!</p>
             <h1 className='text-2xl text-center font-bold mt-8 text-slate-700'>This route is not found</h1>
             <div className='text-center mt-4'>
-                <button onClick={handleNavigate} className='py-2 px-8 font-semibold rounded-md bg-[#7C53F5] text-white'>Go Back To Home</button>
+                <button onClick={handleNavigate} className='py-2 px-8 font-semibold rounded-md bg-[#0EA5E9] text-white'>Go Back To Home</button>
             </div>
         </div>
     );

@@ -19,12 +19,10 @@ const LeftSideNav = () => {
     }, [])
 
     return (
-        <div>
-            <div className='list-none px-3 md:px-0'>
-                {
-                    categories.map(category => <li key={category.id}><Link onClick={handleColor} to={`/courselayout/${category.id}`} id={category.id} className={`${selectedButton === category.id ? "bg-[#7C53F5] text-white" : "bg-white text-[#7C53F5]"} border border-[#7C53F5] rounded-md mb-3 py-3 text-center block hover:bg-[#7C53F5] hover:text-white transition-all`}>{category.title}</Link></li>)
-                }
-            </div>
+        <div className='list-none px-3 mb-8 md:mb-0 md:px-4'>
+            {
+                categories.map(category => <li key={category.id}><Link onClick={handleColor} to={`/courselayout/${category.id}`} id={category.id} className={`${selectedButton === category.id ? "bg-[#0EA5E9] text-white" : "bg-white text-[#0EA5E9]"} border-b border-b-slate-200 py-2 text-center block hover:bg-[#0EA5E9] hover:text-white transition-all`}>{category.title}</Link></li>)
+            }
         </div>
     );
 };

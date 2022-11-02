@@ -1,71 +1,84 @@
 import React from 'react';
-import { Accordion } from 'flowbite-react';
+import Lottie from "lottie-react";
+import faqAnimation from '../../assets/lottie-animation/104452-tech-support (1).json';
+import AnimatedText from 'react-animated-text-content';
 
 const FAQ = () => {
     return (
-        <div className='grid grid-cols-12'>
-            <div className='col-span-1 md:col-span-2'></div>
-            <div className='col-span-10 md:col-span-8 mt-[60px] mb-[50px]'>
-                <Accordion>
-                    <Accordion.Panel>
-                        <Accordion.Title>
+        <>
+            <AnimatedText
+                type="chars"
+                animation={{
+                    x: '200px',
+                    y: '-20px',
+                    scale: 1.1,
+                    ease: 'ease-in-out',
+                }}
+                animationType="float"
+                interval={0.06}
+                duration={1}
+                tag="h1"
+                className="animated-paragraph text-5xl mt-20 font-bold text-center"
+                includeWhiteSpaces
+                threshold={0.1}
+                rootMargin="20%"
+            >
+                Frequently Asked Question
+            </AnimatedText>
+
+            <div className='min-h-screen grid grid-cols-12 items-center md:gap-8'>
+                <div className='col-span-12 md:col-span-6 mb-[50px]'>
+                    <Lottie animationData={faqAnimation} loop={true} />
+                </div>
+
+                <div className='col-span-12 md:col-span-6' data-aos="fade-down" data-aos-duration="1000">
+                    <div tabIndex={0} className="collapse collapse-plus border border-slate-600">
+                        <div className="collapse-title text-slate-800 bg-purple-100 text-lg font-medium">
                             Is your content is free?
-                        </Accordion.Title>
-                        <Accordion.Content>
-                            <p className="text-gray-500 dark:text-gray-400">
+                        </div>
+                        <div className="collapse-content bg-slate-600">
+                            <p className="mt-2">
                                 No, our content is not free. If your are want to learn from us you have to pay.
                             </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title>
+                        </div>
+                    </div>
+
+                    <div tabIndex={0} className="collapse collapse-plus border border-slate-600">
+                        <div className="collapse-title text-slate-800 bg-purple-100 text-lg font-medium">
+                            Is your content is free?
+                        </div>
+                        <div className="collapse-content bg-slate-600">
+                            <p className="mt-2">
+                                No, our content is not free. If your are want to learn from us you have to pay.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div tabIndex={0} className="collapse collapse-plus border border-slate-600">
+                        <div className="collapse-title text-slate-800 bg-purple-100 text-lg font-medium">
                             Is there web development or any other technology course available?
-                        </Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
+                        </div>
+                        <div className="collapse-content bg-slate-600">
+                            <p className="mt-2">
                                 No, We don't have any technology courses right now. But we have a plan to bring it soon.
                             </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title>
-                            What are the differences between Flowbite and Tailwind UI?
-                        </Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.
+                        </div>
+                    </div>
+
+                    <div tabIndex={0} className="collapse collapse-plus border border-slate-600">
+                        <div className="collapse-title text-slate-800 bg-purple-100 text-lg font-medium">
+                            Is there web development or any other technology course available?
+                        </div>
+                        <div className="collapse-content bg-slate-600">
+                            <p className="mt-2">
+                                No, We don't have any technology courses right now. But we have a plan to bring it soon.
                             </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                Learn more about these technologies:
-                            </p>
-                            <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                                <li>
-                                    <a
-                                        href="https://flowbite.com/pro/"
-                                        className="text-blue-600 hover:underline dark:text-blue-500"
-                                    >
-                                        Flowbite Pro
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://tailwindui.com/"
-                                        rel="nofollow"
-                                        className="text-blue-600 hover:underline dark:text-blue-500"
-                                    >
-                                        Tailwind UI
-                                    </a>
-                                </li>
-                            </ul>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                </Accordion>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div className='col-span-1 md:col-span-2'></div>
-        </div>
+        </>
     );
 };
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Course from '../Course/Course';
-import LeftSideNav from '../shared/LeftSideNav/LeftSideNav';
 
 const Courses = () => {
     const [courseData, setCourseData] = useState([]);
@@ -15,7 +14,7 @@ const Courses = () => {
 
 
     return (
-        <div className="courses grid grid-cols-2 lg:grid-cols-3 px-3 md:px-0 gap-10">
+        <div className="courses grid grid-cols-1 lg:grid-cols-3 px-3 md:px-0 gap-8">
             {courseData.map(course => <Course key={course.id} course={course}></Course>)}
         </div>
 

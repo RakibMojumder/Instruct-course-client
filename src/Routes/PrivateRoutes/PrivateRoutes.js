@@ -9,11 +9,12 @@ const PrivateRoutes = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <Spinner
-            color="purple"
-            aria-label="Purple spinner example"
-            className='ml-80 mt-40'
-        />
+        return <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
+            <Spinner
+                color="purple"
+                aria-label="Purple spinner example"
+            />
+        </div>
     }
 
     if (user && user.uid) {
